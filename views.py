@@ -29,3 +29,7 @@ def task2():
 @main_blueprint.route('/task3')
 def task3():
     return render_template('task3.html')
+
+@main_blueprint.route('/task4')
+def task4():
+    return render_template('task4.html')

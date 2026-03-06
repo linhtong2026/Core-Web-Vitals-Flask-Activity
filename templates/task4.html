@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task 4 - Core Web Vitals Activity</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+</head>
+<body>
+  <header class="topbar">
+    <div class="container">
+      <h1>Task 4: Which Core Web Vitals problems can you find?</h1>
+      <p>
+        This page is intentionally inefficient. Measure it with Lighthouse and
+        identify what is hurting LCP, CLS, and possibly INP.
+      </p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-text">
+        <h2>Build your dream workspace</h2>
+        <p>
+          This hero image is the main visual element on the page, but it is loaded
+          in a very poor way on purpose.
+        </p>
+        <button id="cta-btn">Shop now</button>
+      </div>
+
+      <img
+        id="hero-image"
+        class="hero-image"
+        src=""
+        loading="lazy"
+        alt="Large workspace hero image"
+      />
+    </section>
+
+    <section class="intro">
+      <h3>Featured collection</h3>
+      <p>
+        Scroll through the cards below. Some images are inserted late and without
+        dimensions, which can cause content to jump.
+      </p>
+    </section>
+
+    <section class="product-grid" id="product-grid">
+      <article class="card">
+        <div class="image-slot">
+          <img src="https://picsum.photos/id/1040/900/700" alt="Desk setup" loading="lazy" />
+        </div>
+        <h4>Minimal Desk</h4>
+        <p>Clean wooden desk for a focused setup.</p>
+      </article>
+
+      <article class="card">
+        <div class="image-slot">
+          <img src="https://picsum.photos/id/1060/900/700" alt="Modern chair" loading="lazy" />
+        </div>
+        <h4>Modern Chair</h4>
+        <p>Ergonomic comfort for long working sessions.</p>
+      </article>
+
+      <article class="card">
+        <div class="image-slot" id="late-image-slot">
+        </div>
+        <h4>Ambient Lamp</h4>
+        <p>This card gets an image late, causing a visible shift.</p>
+      </article>
+
+      <article class="card">
+        <div class="image-slot">
+          <img src="https://picsum.photos/id/103/900/700" alt="Bookshelf" loading="lazy" />
+        </div>
+        <h4>Bookshelf</h4>
+        <p>Storage that fits a home office space.</p>
+      </article>
+    </section>
+
+    <section class="reviews">
+      <h3>What customers say</h3>
+      <p id="review-text">
+        “The products are beautiful, but this demo page is intentionally bad for performance.”
+      </p>
+    </section>
+  </main>
+
+  
+  <script src="{{ url_for('static', filename='task4.js') }}"></script>
+</body>
+</html>
