@@ -18,13 +18,13 @@
 
 function slowFunction(){
 
-    let start = Date.now();
-
-    while(Date.now() - start < 2000){
-    }
-
     document.getElementById("output").innerText =
-        "Button finished processing";
+        "Processing...";
+
+    setTimeout(function(){
+        document.getElementById("output").innerText =
+            "Button finished processing";
+    }, 2000);
 
 }
 
