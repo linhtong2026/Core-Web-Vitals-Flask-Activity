@@ -17,7 +17,6 @@ def home():
 
 @main_blueprint.route('/task1')
 def task1():
-    time.sleep(3)
     return render_template('task1.html')
 
 
